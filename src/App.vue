@@ -43,11 +43,11 @@
         </div>
     </section>
 
-    <section class="row log p-3 " v-if="turns.length > 0" :style="{ 'marginBottom':  marginBottom+'px' }">
+    <section class="row log p-2 " v-if="turns.length > 0" :style="{ 'marginBottom':  marginBottom+'px' }">
         <div class="small-12 columns p-5" >
             <ul>
                 <li :key="turn" v-for="turn in turns"
-                class="text-xl p-3 mb-3"
+                class="text-lg p-3 mb-3"
                 :class="{ 'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer }"
                 >
                 {{ turn.text }}
