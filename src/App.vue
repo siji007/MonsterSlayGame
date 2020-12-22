@@ -33,15 +33,30 @@
         </div>
     </section>
 
-    <section class="row controls p-4"  v-else-if="gameIsRunning">
+    <!-- <section class="row controls p-4"  v-else-if="gameIsRunning">
 
         <div  class="small-12 columns p-4">
-            <button class="appearance-none p-3 rounded-lg text-2xl" @click="attack" id="attack">ATTACK</button>
-            <button class="appearance-none p-3 ml-4 rounded text-2xl"  @click="specialAttack" id="special-attack">SPECIAL ATTACK</button>
-            <button class="appearance-none p-3  ml-4 text-2xl sm:mt-10"  @click="heal" id="heal">HEAL</button>
-            <button class="appearance-none p-3 rounded-lb  ml-4 text-2xl"  @click="giveUp" id="give-up">GIVE UP</button>
+            <button class="appearance-none p-3 rounded-lg text-xl" @click="attack" id="attack">ATTACK</button>
+            <button class="appearance-none p-3 ml-4 rounded text-xl"  @click="specialAttack" id="special-attack">SPECIAL ATTACK</button>
+            <button class="appearance-none p-3  ml-4 text-xl "  @click="heal" id="heal">HEAL</button>
+            <button class="appearance-none p-3 rounded-lb  ml-4 text-xl"  @click="giveUp" id="give-up">GIVE UP</button>
         </div>
-    </section>
+    </section> -->
+    <div class="row controls p-4" v-else-if="gameIsRunning">
+        <div class="col-lg-3 col-md-12">
+            <button class="appearance-none p-3 rounded-lg text-lg" @click="attack" id="attack">ATTACK</button>
+
+        </div>
+        <div class="col-lg-3 col-md-12">
+            <button class="appearance-none p-3 ml-4 rounded text-lg"  @click="specialAttack" id="special-attack">SPECIAL ATTACK</button>
+        </div>
+        <div class="col-lg-3 col-md-12">
+            <button class="appearance-none p-3  ml-4 text-lg "  @click="heal" id="heal">HEAL</button>
+        </div>
+        <div class="col-lg-3 col-md-12">
+            <button class="appearance-none p-3 rounded ml-4 text-lg"  @click="giveUp" id="give-up">GIVE UP</button>
+        </div>
+    </div>
 
     <section class="row log p-2 " v-if="turns.length > 0" :style="{ 'marginBottom':  marginBottom+'px' }">
         <div class="small-12 columns p-5" >
